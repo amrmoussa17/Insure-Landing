@@ -147,7 +147,20 @@ header .container ul li {
 .different {
   padding-top: 300px;
   padding-bottom: 150px;
+  position: relative;
 }
+.different::before {
+  position: absolute;
+  top: -16%;
+  left: 0px;
+  content: "";
+  background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 51%;
+  width: 16%;
+}
+
 .different h2 {
   font-size: 3em;
   margin-bottom: 40px;
@@ -184,4 +197,82 @@ header .container ul li {
   color: var(--Grayish-Blue);
 }
 /* End  different */
+/* Start how we work */
+.how-we-work .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Dark-Violet);
+  position: relative;
+}
+.how-we-work h1 {
+  color: var(--Very-Light-Gray);
+  width: 335px;
+  padding: 20px;
+  font-family: "DM Serif Display", serif;
+  letter-spacing: -2px;
+  font-weight: 400;
+  font-size: 2em;
+}
+.how-we-work .button-container {
+  padding-inline: 60px;
+}
+.how-we-work .button {
+  color: var(--Very-Light-Gray);
+  border: 1px solid var(--Very-Light-Gray);
+  padding: 5px 15px;
+}
+.how-we-work .container::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+}
+/* End how we work */
+footer {
+  margin-top: 150px;
+  position: relative;
+}
+footer::before {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  content: "";
+  background-image: url(../images/bg-pattern-footer-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 30%;
+}
+footer .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .social-media i {
+  font-size: 1.4em;
+  color: var(--Grayish-Blue);
+}
+footer .contact {
+  display: flex;
+}
+footer .contact ul {
+  flex-basis: 25%;
+  padding: 25px;
+}
+footer .contact li {
+  padding: 5px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+footer .contact .header {
+  color: var(--Grayish-Blue);
+  margin-bottom: 5px;
+}
+
 /* font-family: 'DM Serif Display', serif; */
