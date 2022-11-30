@@ -57,13 +57,17 @@ img {
 }
 /* End Global Rules */
 /* start header */
-header {
-  padding: 20px 0;
-}
-header .container {
+
+header .container .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
+}
+@media (max-width: 767px) {
+  header .container .navbar {
+    padding-bottom: 10px;
+  }
 }
 header img {
   padding: 5px;
@@ -81,9 +85,14 @@ header ul li {
   text-transform: uppercase;
   color: var(--Dark-Grayish-Violet);
 }
-#plan-li {
+.plan-li {
   border: 1px solid black;
   color: black;
+  cursor: pointer;
+}
+.plan-li:hover {
+  background-color: var(--Dark-Violet);
+  color: var(--Very-Light-Gray);
 }
 @media (max-width: 767px) {
   header nav .toggle-menu {
@@ -96,6 +105,20 @@ header ul li {
   header nav ul {
     display: none;
   }
+}
+header .nav-mob {
+  display: none;
+  text-align: center;
+  background-color: var(--Dark-Violet);
+  padding: 10px 0;
+}
+header .nav-mob li {
+  color: var(--Very-Light-Gray);
+}
+header .nav-mob .plan-li {
+  width: fit-content;
+  margin-inline: auto;
+  border: 1px solid var(--Very-Light-Gray);
 }
 /* End header */
 /* Start view plans*/
@@ -161,6 +184,11 @@ img.mobile {
   border: 1px solid var(--Very-Light-Gray);
   padding: 5px 20px;
   width: fit-content;
+  cursor: pointer;
+}
+.view-plans .button:hover {
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Violet);
 }
 @media (max-width: 767px) {
   .view-plans {
@@ -280,14 +308,14 @@ img.mobile {
 }
 /* End  different */
 /* Start how we work */
-.how-we-work {
+
+.how-we-work .container {
   background-color: var(--Dark-Violet);
   position: relative;
-}
-.how-we-work .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 .how-we-work h1 {
   color: var(--Very-Light-Gray);
@@ -300,14 +328,20 @@ img.mobile {
 }
 .how-we-work .button-container {
   padding-inline: 60px;
+  cursor: pointer;
 }
 .how-we-work .button {
   color: var(--Very-Light-Gray);
   border: 1px solid var(--Very-Light-Gray);
   padding: 5px 15px;
   width: fit-content;
+  z-index: 5;
 }
-.how-we-work::before {
+.how-we-work .button:hover {
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Violet);
+}
+.how-we-work .container::before {
   position: absolute;
   top: 0;
   right: -12%;
