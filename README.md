@@ -4,7 +4,7 @@
 
 ## Technologies used
 
-- HTML, CSS, Bootstrap 5
+- HTML, CSS
 
 ## Live Demo
 
